@@ -1,13 +1,12 @@
 package org.example.Entities;
 
 import lombok.Data;
-
 import java.math.BigDecimal;
 
 import java.util.UUID;
 
 @Data
-public class Wallet {
+public class Wallet implements IEntity {
     public enum Currency {
         EUR,
         RUB,

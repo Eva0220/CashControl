@@ -1,7 +1,6 @@
 package org.example.Services;
 
 import org.example.Entities.Transaction;
-import org.example.Entities.User;
 import org.example.Entities.Wallet;
 import org.example.Exceptions.WalletNotFoundException;
 
@@ -17,7 +16,7 @@ public class WalletService {
 
     public UUID createWallet(UUID userId, String name, Wallet.Currency currency) {
         Wallet wallet = new Wallet(name, BigDecimal.ZERO, currency, userId);
-        storage.save(wallet.getId(), wallet);
+        storage.save(wallet);
         System.out.println("Кошелек создан\n" + wallet);
         return wallet.getId();
     }

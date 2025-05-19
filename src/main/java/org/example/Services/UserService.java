@@ -1,9 +1,6 @@
 package org.example.Services;
 import org.example.Entities.User;
 import org.example.Exceptions.UserNotFoundException;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -16,7 +13,7 @@ public class UserService {
 
     public UUID createUser(String fullName, int age, String passportData, String email) {
         User user = new User(fullName, age, passportData, email);
-        storage.save(user.getId(), user);
+        storage.save(user);
         System.out.println("Пользователь создан:\n" + "Id: " + user.getId());
         return user.getId();
     }

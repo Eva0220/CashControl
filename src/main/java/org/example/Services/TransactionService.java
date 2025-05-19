@@ -1,9 +1,7 @@
 package org.example.Services;
 
 import org.example.Entities.Transaction;
-import org.example.Entities.Wallet;
 import org.example.Exceptions.TransactionNotFoundException;
-import org.example.Exceptions.WalletNotFoundException;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -16,10 +14,9 @@ public class TransactionService {
         this.storage = storage;
     }
 
-
     public void createTransaction(UUID walletId, Transaction.TransactionType transactionType, BigDecimal amount) {
         Transaction transaction = new Transaction(transactionType, amount, LocalDateTime.now(), walletId);
-        storage.save(transaction.getId(), transaction);
+        storage.save(transaction);
         System.out.println("Транзакция создана");
     }
 

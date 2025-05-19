@@ -1,5 +1,7 @@
 package org.example.Services;
 
+import org.example.Entities.IEntity;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,12 +9,12 @@ import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class MapStorageService<T> implements IStorageService<T> {
+public class MapStorageService<T extends IEntity> implements IStorageService<T> {
     private final Map<UUID, T> items = new HashMap<>();
 
     @Override
-    public void save(UUID id, T object) {
-        items.put(id, object);
+    public void save(T object) {
+        items.put(object.getId(), object);
     }
 
     @Override

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.UUID;
 
 @Data
-public class User {
+public class User implements IEntity {
     private UUID id;
     @NotBlank(message = "ФИО не должно быть пустым")
     @Pattern(regexp = "^[A-Za-zА-Яа-яЁё]+([\\sA-Za-zА-Яа-яЁё]+)*$", message = "ФИО должно содержать только буквы (русские или английские) и пробелы")

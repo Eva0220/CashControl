@@ -1,13 +1,12 @@
 package org.example.Entities;
 
 import lombok.Data;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-public class Transaction {
+public class Transaction implements IEntity {
     public enum TransactionType {
         DEPOSIT,
         WITHDRAWAL
