@@ -2,10 +2,12 @@ package org.example.Handlers.UserActions;
 
 import org.example.Exceptions.UserNotFoundException;
 import org.example.Services.UserService;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 import java.util.UUID;
 
+@Component
 public class UserMenuHandler {
     private final UserService userService;
     private final UserInputHandler userInputHandler;

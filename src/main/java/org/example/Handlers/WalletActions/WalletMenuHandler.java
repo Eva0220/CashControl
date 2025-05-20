@@ -4,11 +4,13 @@ import org.example.Entities.Wallet;
 import org.example.Exceptions.WalletNotFoundException;
 import org.example.Handlers.TransactionActions.TransactionMenuHandler;
 import org.example.Services.WalletService;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
+@Component
 public class WalletMenuHandler {
     private final WalletService walletService;
     private final WalletInputHandler walletInputHandler;

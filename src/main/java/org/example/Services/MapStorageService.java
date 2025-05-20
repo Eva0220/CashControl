@@ -1,6 +1,7 @@
 package org.example.Services;
 
 import org.example.Entities.IEntity;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+@Component
 public class MapStorageService<T extends IEntity> implements IStorageService<T> {
     private final Map<UUID, T> items = new HashMap<>();
 
@@ -29,6 +31,8 @@ public class MapStorageService<T extends IEntity> implements IStorageService<T> 
 
     @Override
     public List<T> findAllBy(Predicate<T> predicate) {
-        return items.values().stream().filter(predicate).collect(Collectors.toList());
+        return items.values().stream()
+                .filter(predicate)
+                .collect(Collectors.toList());
     }
 }

@@ -4,11 +4,13 @@ import org.example.Entities.Transaction;
 import org.example.Exceptions.TransactionNotFoundException;
 import org.example.Services.TransactionService;
 import org.example.Services.WalletService;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.UUID;
 
+@Component
 public class TransactionMenuHandler {
     private final TransactionService transactionService;
     private final WalletService walletService;

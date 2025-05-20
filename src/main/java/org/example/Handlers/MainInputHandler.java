@@ -4,10 +4,12 @@ import org.example.Handlers.UserActions.UserInputHandler;
 import org.example.Handlers.UserActions.UserMenuHandler;
 import org.example.Handlers.WalletActions.WalletMenuHandler;
 import org.example.Services.UserService;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 import java.util.UUID;
 
+@Component
 public class MainInputHandler {
     private final UserService userService;
     private final UserInputHandler userInputHandler;

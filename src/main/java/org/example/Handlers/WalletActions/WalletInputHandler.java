@@ -1,9 +1,11 @@
 package org.example.Handlers.WalletActions;
 
 import org.example.Entities.Wallet;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+@Component
 public class WalletInputHandler {
     private final Scanner scanner;
 

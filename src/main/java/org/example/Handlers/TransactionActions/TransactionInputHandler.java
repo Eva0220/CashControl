@@ -1,11 +1,13 @@
 package org.example.Handlers.TransactionActions;
 
 import org.example.Entities.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.UUID;
 
+@Component
 public class TransactionInputHandler {
     private final Scanner scanner;
 

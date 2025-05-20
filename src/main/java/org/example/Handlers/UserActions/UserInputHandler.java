@@ -2,9 +2,11 @@ package org.example.Handlers.UserActions;
 
 import org.example.Entities.User;
 import org.example.Utils.ValidationUtil;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
 public class UserInputHandler {
     private final Scanner scanner;
 
